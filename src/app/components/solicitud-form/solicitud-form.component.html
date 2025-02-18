@@ -1,4 +1,4 @@
-<h2>Crear Nueva Solicitud</h2>
+<h2>Actualización de la Solicitud</h2>
 <form [formGroup]="solicitudForm" (ngSubmit)="onSubmit()">
   <label>
     Nombre:
@@ -17,8 +17,14 @@
   <br>
   <label>
     Estado:
-    <input formControlName="estado" />
+    <select formControlName="estado">
+      <option value="Aprobado">Aprobado</option>
+      <option value="Preaprobado">Preaprobado</option>
+      <option value="Rechazado">Rechazado</option>
+      <option value="Cancelado">Cancelado</option>
+      <option value="En análisis">En Análisis</option>
+    </select>
   </label>
   <br>
-  <button type="submit" [disabled]="solicitudForm.invalid">Crear Solicitud</button>
+  <button type="submit" [disabled]="solicitudForm.invalid">Actualizar Solicitud</button>
 </form>

@@ -37,4 +37,6 @@ export class SolicitudesService {
   deleteSolicitud(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+
 }

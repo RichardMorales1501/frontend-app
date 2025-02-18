@@ -1,0 +1,25 @@
+<h2>Lista de Solicitudes</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Monto</th>
+      <th>Estado</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let solicitud of solicitudes">
+      <td>{{ solicitud.id }}</td>
+      <td>{{ solicitud.nombre }}</td>
+      <td>{{ solicitud.email }}</td>
+      <td>{{ solicitud.monto }}</td>
+      <td>{{ solicitud.estado }}</td>
+      <td>
+        <button (click)="deleteSolicitud(solicitud.id!)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+<h2>Crear Nueva Solicitud</h2>
+<form [formGroup]="solicitudForm" (ngSubmit)="onSubmit()">
+  <label>
+    Nombre:
+    <input formControlName="nombre" />
+  </label>
+  <br>
+  <label>
+    Email:
+    <input formControlName="email" />
+  </label>
+  <br>
+  <label>
+    Monto:
+    <input type="number" formControlName="monto" />
+  </label>
+  <br>
+  <label>
+    Estado:
+    <input formControlName="estado" />
+  </label>
+  <br>
+  <button type="submit" [disabled]="solicitudForm.invalid">Crear Solicitud</button>
+</form>
